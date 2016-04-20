@@ -20,7 +20,7 @@ A Discord Bot for Local Music with library and role management.
 - email: Your bot's email. Optional if token provided. [Required/Optional]
 - password: Your bot's password. Optional if token provided. [Required/Optional]
 - libraryName: Name of your startup library. [Required]
-- libraryPath: Path to your startup library. Use / not \. [Required]
+- libraryPath: Path to your startup library. Use /. [Required]
 - allowedChannels: Array of channel IDs which the bot will listen to. [Required]
 
 ## Perm Progress
