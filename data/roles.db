@@ -1,0 +1,6 @@
+{"id":5,"name":"Moderator","perm":["search","list","current","queue","join","leave","skip","role.view","promote","demote","unqueue","shuffle"],"_id":"DmO8GHlO5LU4u1qH"}
+{"default":true,"id":10,"name":"Member","perm":["search","list","current"],"_id":"QgJqyNCjeClxjNGc"}
+{"id":2,"name":"Admin","perm":["search","list","current","queue","join","leave","skip","role.view","promote","demote","unqueue","library.view","library.select","library.list","shuffle"],"_id":"ZiVP2gwMJ64iI7YG"}
+{"id":8,"name":"Listener","perm":["search","list","current","queue","join","leave","skip","role.view","shuffle"],"_id":"pt53hRgbxxmuOYGk"}
+{"id":0,"name":"Owner","_id":"sHcL5t6fYJgl0lP8"}
+{"$$indexCreated":{"fieldName":"id","unique":true,"sparse":false}}
