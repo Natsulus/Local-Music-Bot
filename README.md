@@ -4,14 +4,14 @@ A Discord Bot for Local Music with library and role management.
 ## Requirements
 - Node.js (>v5.0.0)
 - Python (v2.7.x)
-- ffmpeg (Add bin folder to PATH Environment Variable)
+- FFmpeg (Add bin folder to PATH Environment Variable)
 
 ## Installation
 1. Download the repository with git clone or some other method to a directory.
 2. Open a command prompt/terminal at the directory.
 3. Run npm install
 4. Set the configuration in the config.json file.
-5. Run node start
+5. Run npm start
 
 ## Config
 - prefix: The prefix the bot uses. [Required]
@@ -62,3 +62,4 @@ A Discord Bot for Local Music with library and role management.
 - Complete Perm Progress.
 - Handle moved, modified, and deleted files.
 - Prettify the messages.
+- Create docs on command usage.
