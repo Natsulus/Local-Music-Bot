@@ -16,10 +16,6 @@ email
     Your bot's email. Optional if token provided.
 password
     Your bot's password. Optional if token provided.
-libraryName
-    Name of your startup library.
-libraryPath
-    Path to your startup library. Use /.
 allowedChannels
     Array of channel IDs which the bot will listen to. 
     
@@ -34,7 +30,5 @@ Example
         "token": "ABC123def987-zxyNOP546",
         "email": "",
         "password": "",
-        "libraryName": "Music",
-        "libraryPath": "C:/Users/Name/Music",
         "allowedChannels": ["23456789098765432", "23456789098765432", "23456789098765432"]
     }

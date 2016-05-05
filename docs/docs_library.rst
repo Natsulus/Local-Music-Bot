@@ -8,29 +8,21 @@ Name
 ----
 
 | The name of the library. 
-| This must be unique.
-| 
-
+| This must be unique.
 Path
 ----
 
 | The root path of the library. Paths should not use \ and should instead use /.
-| This must be unique.
-| 
-
+| This must be unique.
 Description
 -----------
 
-| A description of the library.
-| 
-
+| A description of the library.
 Active
 ------
 
 | Only one library has the value of this key as true at one time.
-| Library with this key as true is the library that is currently being used.
-| 
-
+| Library with this key as true is the library that is currently being used.
 Notes
 ~~~~~
 
