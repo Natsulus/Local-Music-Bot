@@ -40,7 +40,10 @@ data/*
 !data/roles.db
 
 # Library
-library/*
+libraries/*
 
 # Config
 configDev.json
+
+# Docs
+docs/_build
