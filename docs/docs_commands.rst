@@ -16,7 +16,7 @@ queue `Query`
 -------------
 
 | Perm: *query.queue*
-| Aliases: insert
+| Aliases: insert, q
 
 Searches for songs based on a :ref:`query` and queues a song or list.
 
@@ -108,23 +108,23 @@ role
 ----
 
 | Perm: *role.view.own*
-| Aliases: job
+| Aliases: r
 
 View details about own role.
 
-role `@mention`
+role `User#Tag`
 ---------------
 
 | Perm: *role.view.other*
-| Aliases: job
+| Aliases: r
 
-View details about the role of @mention user.
+View details about the role of User#Tag.
 
-role view `ID/Name`
--------------------
+role view `ID`
+--------------
 
 | Perm: *role.view.detail*
-| Aliases: job
+| Aliases: r
 
 View details about specified role.
 
@@ -132,73 +132,73 @@ role list
 ---------
 
 | Perm: *role.view.list*
-| Aliases: job
+| Aliases: r
 
 Lists all roles with their ID and Name.
 
-role add `ID` | `Name` | `Description` [UNAVAILABLE]
-----------------------------------------------------
+role add `ID` | `Name` | `Description`
+--------------------------------------
 
 | Perm: *role.mod.add*
-| Aliases: job
+| Aliases: r
 
 Adds a new role. Description is optional.
 
-role delete `ID/Name` [UNAVAILABLE]
------------------------------------
+role delete `ID`
+----------------
 
 | Perm: *role.mod.delete*
-| Aliases: job
+| Aliases: r
 
-Deletes the role with the specified role.
+Deletes the role with the specified role. All users with the deleted role will have their role set to the default role.
 
-role edit `ID/Name` | `Key` | `Value` [UNAVAILABLE]
----------------------------------------------------
+role edit `ID` | `Key` | `Value`
+--------------------------------
 
 | Perm: *role.mod.edit*
-| Aliases: job
+| Aliases: r
 
 Edits the key for the specified role with the value. Cannot edit the keys Perm or Default.
 
-role set `ID/Name` `@mention`
------------------------------
+role set `ID` `User#Tag`
+------------------------
 
 | Perm: *role.mod.set*
-| Aliases: job
+| Aliases: r
 
-Sets the role of @mention users with the specified role. Can @mention multiple users.
+Sets the role of User#Tag with the specified role. Can enter multiple User#Tag, separated by ``" | "``. e.g. ``>role set 5 Bob#1234 | Fred#0420 | Tim#000``
 
 role default
 ------------
 
 | Perm: *role.default.view*
-| Aliases: job
+| Aliases: r
 
 View details on the default role.
 
-role default `ID/Name` [UNAVAILABLE]
-------------------------------------
+role default `ID`
+-----------------
 
 | Perm: *role.default.set*
-| Aliases: job
+| Aliases: r
 
-Sets the default role with the specified role.
+Sets the default role to the specified role. ID must be greater than 5.
 
-role give `ID/Name` `Perm` [UNAVAILABLE]
-----------------------------------------
+role give `ID` `Perm`
+---------------------
 
 | Perm: *role.perm.give*
-| Aliases: job
+| Aliases: r
 
-Gives the specified role the specified Perm.
+Gives the specified role the specified Perm. Can enter multiple perm, separated by a space. e.g. ``>role give 5 role.default.view role.view playlist``
 
-role remove `ID/Name` `Perm` [UNAVAILABLE]
-------------------------------------------
+role remove `ID` `Perm`
+-----------------------
 
 | Perm: *role.perm.remove*
-| Aliases: job
+| Aliases: r
 
-Removes the specified Perm from the specified role.
+Removes the specified Perm from the specified role. Can enter multiple perm, separated by a space. e.g. ``>role remove 5 role.default.view role.view playlist``
 
 Library
 ~~~~~~~
@@ -258,8 +258,8 @@ update
 | Aliases: 
 Check active library for any changes and updates the library.
 
-update `LibraryName` [UNAVAILABLE]
-----------------------------------
+update `LibraryName`
+--------------------
 
 | Perm: *library.update.other*
 | Aliases: 

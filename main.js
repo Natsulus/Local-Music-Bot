@@ -2,7 +2,7 @@
 const CommandManager = require('./lib/command-manager.js');
 const Discord = require('discord.js');
 const Datastore = require('nedb');
-const config = require('./configDev.json');
+const config = require('./config.json');
 
 const bot = new Discord.Client();
 const db = {};
@@ -14,14 +14,14 @@ db.roles = new Datastore({filename: './data/roles.db', autoload: true});
 db.roles.ensureIndex({fieldName: 'id', unique: true});
 db.users = new Datastore({filename: './data/users.db', autoload: true});
 db.playlists = new Datastore({filename: './data/playlists.db', autoload: true});
+db.playlists.ensureIndex({fieldName: 'name', unique: true});
 
-const commandManager = new CommandManager(bot, config, db);
+const commandManager = new CommandManager(bot, db);
 
 bot.on("warn", m => console.log("[warn]", m));
 bot.on("debug", m => console.log("[debug]", m));
 
 bot.on('ready', () => {
-    db.libraries.update({name: config.libraryName}, {$set: {name: config.libraryName, path: config.libraryPath}}, {upsert: true});
     db.roles.findOne({default: true}, (err, role) => {
         if (err) console.log(err);
         for (const user of bot.users) {
@@ -38,7 +38,12 @@ bot.on('ready', () => {
 });
 
 bot.on('message', m => {
-    commandManager.parse(m);
+    if (config.allowedChannels.indexOf(m.channel.id) !== -1) {
+        if (m.content.startsWith(config.prefix)) {
+            m.content = m.cleanContent.substring(config.prefix.length);
+            commandManager.parse(m);
+        }
+    }
 });
 
 if (config.token !== '') bot.loginWithToken(config.token).catch(err => {console.log(err);});
