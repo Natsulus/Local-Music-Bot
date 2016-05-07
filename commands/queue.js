@@ -7,7 +7,7 @@ exports.aliases = ['insert', 'q'];
 exports.execute = function (data, cm, funcs) {
     cm.perms.check(data.m.author.id, 'query.queue', allow => {
         if (!allow) return;
-        if (!cm.lib) return;
+        if (!cm.lib) return data.m.channel.sendMessage('A library must be selected.');
         if (!cm.bot.voiceConnection) return;
         let reply = '';
         let length;

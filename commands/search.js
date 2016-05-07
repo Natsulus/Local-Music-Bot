@@ -7,7 +7,7 @@ exports.aliases = ['find'];
 exports.execute = function (data, cm, funcs) {
     cm.perms.check(data.m.author.id, 'query.search', allow => {
         if (!allow) return;
-        if (!cm.lib) return;
+        if (!cm.lib) return data.m.channel.sendMessage('A library must be selected.');
         let reply = '';
         let length;
         
