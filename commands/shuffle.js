@@ -9,8 +9,12 @@ exports.execute = function (data, cm) {
         if (!allow) return;
         let reply = '';
 
-        cm.music.shuffle();
-        reply += 'Queue has been shuffled.';
+        if (cm.music.queue.length > 1) {
+            cm.music.shuffle();
+            reply += 'Queue has been shuffled.';
+        } else {
+            reply += 'Queue too small to be shuffled.';
+        }
         data.m.channel.sendMessage(reply);
     });
 };
