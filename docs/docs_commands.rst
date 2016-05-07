@@ -207,13 +207,15 @@ library
 -------
 
 | Perm: *library.view.active*
+| Aliases: lib
 
 View details of the active library.
 
 library `Name`
 --------------
 
-| Perm: *library.view.detail*
+| Perm: *library.view.detail*
+| Aliases: lib
 View details of specified library.
 
 library list
