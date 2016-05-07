@@ -16,7 +16,7 @@ allbumartist Case-Insensitive & Partial Matching
 filename     Case-Insensitive & Partial Matching
 duration     Number for amount of seconds. Negative for *shorter than*, Positive for *longer than*.
 page         Number. Results are limited to 20 per page.
-track        Number or Range.
+track        Number or Range. This is the number seen in the results and not the track number of an album.
 sortby       none, title, album, artist, albumartist, filename, duration. Sorts in ascending order, add - in front for descending.
 random       Provide any value to get a random song based on other query values except page, track and sortby.
 ============ =====================================
