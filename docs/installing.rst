@@ -11,7 +11,7 @@ Windows
 
 - `Python 2.7`_ - Requires v2.7.x, not v3.x.x.
 
-- `Visual Studio`_ - Currently unsure if optional, but you can try installing without it first.
+- `Visual Studio`_ - Select Custom Installation and make sure C++ is selected.
 
   - Your Visual Studio installation ideally has to be recent.
 
