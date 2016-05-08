@@ -17,7 +17,7 @@ email
 password
     Your bot's password. Optional if token provided.
 allowedChannels
-    Array of channel IDs which the bot will listen to. Used to avoid clogging up channel logs.
+    Array of **text** channel IDs which the bot will listen to. Used to avoid clogging up channel logs.
     
 Example
 -------
