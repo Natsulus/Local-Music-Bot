@@ -7,6 +7,7 @@ Changelog
 - Fixed Perm Checking
 - Fixed Role Set Command
 - Started Planning `v1.1 Update <https://github.com/Natsulus/Local-Music-Bot/issues/1>`_
+- Created a `Support Server <https://discord.gg/0101r4YHGd4Yy5u8C>`_
 
 1.0.0
 -----
