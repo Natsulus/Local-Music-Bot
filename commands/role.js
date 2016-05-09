@@ -168,7 +168,7 @@ exports.execute = function (data, cm, funcs) {
             args = args.join(' ');
             let userlist = args.split(' | ');
 
-            if (funcs.checkInteger(id) || id === 0) return;
+            if (!funcs.checkInteger(id) || id === 0) return;
 
             cm.db.users.findOne({id: data.m.author.id}, {role: 1}, (err, user) => {
                 cm.db.roles.findOne({id}, (err2, role) => {

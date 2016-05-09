@@ -1,6 +1,6 @@
 {
   "name": "local-music-bot",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Play local music files to Discord.",
   "main": "index.js",
   "scripts": {

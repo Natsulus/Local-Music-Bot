@@ -1,6 +1,13 @@
 Changelog
 =========
 
+1.0.1
+-----
+
+- Fixed Perm Checking
+- Fixed Role Set Command
+- Started Planning `v1.1 Update <https://github.com/Natsulus/Local-Music-Bot/issues/1>`_
+
 1.0.0
 -----
 
