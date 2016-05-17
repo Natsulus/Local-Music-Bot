@@ -11,9 +11,10 @@ Windows
 
 - `Python 2.7`_ - Requires v2.7.x, not v3.x.x.
 
-- `Visual Studio`_ - Select Custom Installation and make sure C++ is selected.
+- `Visual Studio`_ - Select Custom Installation and make sure Visual C++ under Programming Languages is selected.
 
   - Your Visual Studio installation ideally has to be recent.
+  - Can be Express, Community or Enterprise Edition, but NOT ``VS Code``.
 
 - `FFmpeg`_ - Add bin folder to PATH Environment Variable.
 
