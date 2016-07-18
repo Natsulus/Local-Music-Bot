@@ -69,6 +69,14 @@ Get the album art of the current song if available.
 Queue
 ~~~~~
 
+autoplay `on` | `off` | `status`
+--------------------------------------
+
+| Perm: *role.mod.add*
+| Aliases: auto, ap
+
+Enables or disables autoplay.
+
 unqueue `NumberOrRange`
 -----------------------
 

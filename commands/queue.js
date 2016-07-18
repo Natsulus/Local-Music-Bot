@@ -25,7 +25,7 @@ exports.execute = function (data, cm, funcs) {
                 reply += song.artist ? ` by ${song.artist}` : ``;
                 reply += song.album ? ` from ${song.album}` : ``;
                 reply += ` to the queue.`;
-                cm.music.play();
+                cm.music.play(data, cm, funcs);
                 data.m.channel.sendMessage(reply);
             });
         } else {
@@ -38,7 +38,7 @@ exports.execute = function (data, cm, funcs) {
                             cm.music.queue.push(song);
                         }
                         reply += `Added ${list.length} songs to the queue.`;
-                        cm.music.play();
+                        cm.music.play(data, cm, funcs);
                         data.m.channel.sendMessage(reply);
                     });
                 } else {
@@ -51,7 +51,7 @@ exports.execute = function (data, cm, funcs) {
                         reply += song.artist ? ` by ${song.artist}` : ``;
                         reply += song.album ? ` from ${song.album}` : ``;
                         reply += ` to the queue.`;
-                        cm.music.play();
+                        cm.music.play(data, cm, funcs);
                         data.m.channel.sendMessage(reply);
                     });
                 }
@@ -63,7 +63,7 @@ exports.execute = function (data, cm, funcs) {
                         cm.music.queue.push(song);
                     }
                     reply += `Added ${list.length} songs to the queue.`;
-                    cm.music.play();
+                    cm.music.play(data, cm, funcs);
                     data.m.channel.sendMessage(reply);
                 });
             }
